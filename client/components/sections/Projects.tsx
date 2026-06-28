@@ -27,8 +27,8 @@ const Projects = () => {
     image: 'news.jpg',
     technologies: ['Python', 'Machine Learning', 'NLP', 'Scikit-Learn', 'Streamlit'],
     category: 'Machine Learning',
-    liveUrl: '#',
-    githubUrl: 'https://github.com/Pralay567/fake-news-detection',
+    liveUrl: 'https://fake-news-detection-ml-tmfdyzjga4fhsgcx9pwes6.streamlit.app/',
+    githubUrl: 'https://github.com/Pralay567/fake-news-detection-ml',
     featured: true,
   },
 
@@ -40,8 +40,8 @@ const Projects = () => {
     image: 'election.jpg',
     technologies: ['Python', 'Streamlit', 'Gemini AI', 'Folium', 'Geopy'],
     category: 'AI',
-    liveUrl: '#',
-    githubUrl: 'https://github.com/Pralay567',
+    liveUrl: 'https://election-assistant-fdgxetefqsxjy4dqu2j8ra.streamlit.app/',
+    githubUrl: 'https://github.com/Pralay567/election-assistant',
     featured: true,
   },
   {
@@ -52,8 +52,8 @@ const Projects = () => {
     image: 'business.jpg',
     technologies: ['Python', 'Pandas', 'Power BI', 'SQL', 'Data Analysis'],
     category: 'Analytics',
-    liveUrl: '#',
-    githubUrl: 'https://github.com/Pralay567',
+    liveUrl: 'https://global-business-analytics-dashboard-o2xvjzfd4sjrmhfrcw6qss.streamlit.app/',
+    githubUrl: 'https://github.com/Pralay567/Global-Business-Analytics-Dashboard',
     featured: true,
   },
   {
@@ -64,8 +64,8 @@ const Projects = () => {
     image: 'portfolio.jpg',
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
     category: 'Frontend',
-    liveUrl: '#',
-    githubUrl: 'https://github.com/Pralay567',
+    liveUrl: 'https://spiffy-youtiao-009ed2.netlify.app/',
+    githubUrl: 'https://github.com/Pralay567/pralay-devfolio',
     featured: false,
   }
   ]
