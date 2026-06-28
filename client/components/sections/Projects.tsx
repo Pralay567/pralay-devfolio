@@ -28,7 +28,7 @@ const Projects = () => {
     technologies: ['Python', 'Machine Learning', 'NLP', 'Scikit-Learn', 'Streamlit'],
     category: 'Machine Learning',
     liveUrl: '#',
-    githubUrl: 'https://github.com/Pralay567/fake-news-detection',
+    githubUrl: 'https://github.com/Pralay567/fake-news-detection-ml/tree/main',
     featured: true,
   },
 
