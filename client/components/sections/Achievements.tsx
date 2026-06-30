@@ -19,45 +19,45 @@ const Achievements = () => {
 
   const achievements: Achievement[] = [
     {
-      id: 1,
-      name: 'B.Tech CSE (AI & ML)',
-      role: 'Education',
-      company: 'Brainware University',
-      image: 'clogo.jpg',
-      content:
-        'Completed Bachelor of Technology in Computer Science Engineering with specialization in Artificial Intelligence and Machine Learning.',
-      project: 'Academic Achievement',
-    },
-    {
-      id: 2,
-      name: 'Machine Learning Projects',
-      role: 'Project Experience',
-      company: 'Portfolio',
-      image: 'machine.jpg',
-      content:
-        'Built multiple projects including Fake News Detection System, Election Guide Assistant, and Business Analytics Dashboard using Python and Machine Learning.',
-      project: 'Technical Projects',
-    },
-    {
-      id: 3,
-      name: 'Certifications',
-      role: 'Professional Development',
-      company: 'Learning',
-      image: 'certified.jpg',
-      content:
-        'Completed certifications in Data Analytics, SQL, Machine Learning, and Business Analytics to strengthen practical industry skills.',
-      project: 'Continuous Learning',
-    },
-    {
-      id: 4,
-      name: 'Open Source & GitHub',
-      role: 'Development',
-      company: 'GitHub',
-      image: 'git.jpg',
-      content:
-        'Actively developing and maintaining projects on GitHub while continuously improving coding, problem-solving, and software engineering practices.',
-      project: 'Portfolio Development',
-    },
+  id: 2,
+  name: 'Machine Learning Projects',
+  role: 'Project Experience',
+  company: 'Portfolio',
+  image: 'machine.jpg',
+  content:
+    'Designed and deployed multiple real-world projects, including Fake News Detection, Election Guide Assistant, and Business Analytics Dashboard, demonstrating expertise in Python, Machine Learning, NLP, AI, and Data Analytics.',
+  project: 'Technical Projects',
+},
+{
+  id: 3,
+  name: 'Certifications',
+  role: 'Professional Development',
+  company: 'Learning',
+  image: 'certified.jpg',
+  content:
+    'Earned industry-recognized certifications in Data Analytics, SQL, Machine Learning, and Business Analytics, strengthening practical skills through continuous learning.',
+  project: 'Continuous Learning',
+},
+{
+  id: 4,
+  name: 'AWS User Group Kolkata',
+  role: 'Volunteer',
+  company: 'AWS Community',
+  image: 'aws.jpg',
+  content:
+    'Active volunteer at AWS User Group Kolkata, supporting community-driven technical events, engaging with developers, and contributing to knowledge-sharing initiatives in cloud computing and emerging technologies.',
+  project: 'Community Leadership',
+},
+{
+  id: 5,
+  name: 'Open Source & GitHub',
+  role: 'Development',
+  company: 'GitHub',
+  image: 'git.jpg',
+  content:
+    'Actively building, maintaining, and deploying open-source projects on GitHub while continuously improving software engineering, problem-solving, and version control practices.',
+  project: 'Portfolio Development',
+},
   ];
 
   const nextSlide = () => {
