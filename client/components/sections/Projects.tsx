@@ -20,54 +20,56 @@ const Projects = () => {
 
   const projects: Project[] = [
   {
-    id: 1,
-    title: 'Fake News Detection System',
-    description:
-      'Machine Learning-powered web application that detects whether a news article is real or fake. Built with Python, NLP, Scikit-learn, and Streamlit with confidence score prediction.',
-    image: 'news.jpg',
-    technologies: ['Python', 'Machine Learning', 'NLP', 'Scikit-Learn', 'Streamlit'],
-    category: 'Machine Learning',
-    liveUrl: 'https://fake-news-detection-ml-tmfdyzjga4fhsgcx9pwes6.streamlit.app/',
-    githubUrl: 'https://github.com/Pralay567/fake-news-detection-ml/tree/main',
-    featured: true,
-  },
+  id: 1,
+  title: 'Fake News Detection System',
+  description:
+    'Built an NLP-based machine learning application to classify news articles as real or fake. Trained and evaluated multiple Scikit-learn models using TF-IDF vectorization, achieving reliable prediction accuracy with confidence scores. Deployed as an interactive Streamlit web app for real-time news verification.',
+  image: 'news.jpg',
+  technologies: ['Python', 'Machine Learning', 'NLP', 'Scikit-Learn', 'Streamlit'],
+  category: 'Machine Learning',
+  liveUrl: 'https://fake-news-detection-ml-tmfdyzjga4fhsgcx9pwes6.streamlit.app/',
+  githubUrl: 'https://github.com/Pralay567/fake-news-detection-ml/tree/main',
+  featured: true,
+},
 
-  {
-    id: 2,
-    title: 'Election Guide Assistant',
-    description:
-      'AI-powered election assistance platform providing election-related information, constituency guidance, and location-based services using Google Gemini AI and interactive maps.',
-    image: 'election.jpg',
-    technologies: ['Python', 'Streamlit', 'Gemini AI', 'Folium', 'Geopy'],
-    category: 'AI',
-    liveUrl: 'https://election-assistant-fdgxetefqsxjy4dqu2j8ra.streamlit.app/',
-    githubUrl: 'https://github.com/Pralay567/election-assistant',
-    featured: true,
-  },
-  {
-    id: 3,
-    title: 'Business Analytics Dashboard',
-    description:
-      'Interactive dashboard for analyzing business performance, KPIs, sales trends, and customer insights using data visualization techniques.',
-    image: 'business.jpg',
-    technologies: ['Python', 'Pandas', 'Power BI', 'SQL', 'Data Analysis'],
-    category: 'Analytics',
-    liveUrl: 'https://global-business-analytics-dashboard-o2xvjzfd4sjrmhfrcw6qss.streamlit.app/',
-    githubUrl: 'https://github.com/Pralay567/Global-Business-Analytics-Dashboard',
-    featured: true,
-  },
-  {
-    id: 4,
-    title: 'Portfolio Website',
-    description:
-      'Personal portfolio showcasing projects, technical skills, certifications, and professional achievements with responsive modern design.',
-    image: 'portfolio.jpg',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
-    category: 'Frontend',
-    liveUrl: 'https://spiffy-youtiao-009ed2.netlify.app/',
-    githubUrl: 'https://github.com/Pralay567/pralay-devfolio',
-    featured: false,
-  }
+{
+  id: 2,
+  title: 'Election Guide Assistant',
+  description:
+    'Developed an AI-powered election assistance platform that provides constituency details, election guidance, and location-based services. Integrated Google Gemini AI, Folium maps, and geolocation to deliver accurate, interactive, and user-friendly election information.',
+  image: 'election.jpg',
+  technologies: ['Python', 'Streamlit', 'Gemini AI', 'Folium', 'Geopy'],
+  category: 'AI',
+  liveUrl: 'https://election-assistant-fdgxetefqsxjy4dqu2j8ra.streamlit.app/',
+  githubUrl: 'https://github.com/Pralay567/election-assistant',
+  featured: true,
+},
+
+{
+  id: 3,
+  title: 'Business Analytics Dashboard',
+  description:
+    'Designed an interactive business intelligence dashboard to analyze sales performance, customer behavior, and key business KPIs. Leveraged SQL, Pandas, Power BI, and Streamlit to transform raw data into actionable insights through dynamic visualizations.',
+  image: 'business.jpg',
+  technologies: ['Python', 'Pandas', 'Power BI', 'SQL', 'Data Analysis'],
+  category: 'Analytics',
+  liveUrl: 'https://global-business-analytics-dashboard-o2xvjzfd4sjrmhfrcw6qss.streamlit.app/',
+  githubUrl: 'https://github.com/Pralay567/Global-Business-Analytics-Dashboard',
+  featured: true,
+},
+
+{
+  id: 4,
+  title: 'Portfolio Website',
+  description:
+    'Designed and developed a modern, responsive developer portfolio to showcase projects, technical skills, certifications, and achievements. Built with React, TypeScript, Tailwind CSS, and Vite, featuring smooth animations, project filtering, and optimized performance.',
+  image: 'portfolio.jpg',
+  technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
+  category: 'Frontend',
+  liveUrl: 'https://spiffy-youtiao-009ed2.netlify.app/',
+  githubUrl: 'https://github.com/Pralay567/pralay-devfolio',
+  featured: false,
+}
   ]
   /*{
     id: 4,
