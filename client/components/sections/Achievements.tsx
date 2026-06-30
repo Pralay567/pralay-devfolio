@@ -19,6 +19,16 @@ const Achievements = () => {
 
   const achievements: Achievement[] = [
     {
+      id: 1,
+      name: 'B.Tech CSE (AI & ML)',
+      role: 'Education',
+      company: 'Brainware University',
+      image: 'clogo.jpg',
+      content:
+        'Completed Bachelor of Technology in Computer Science Engineering with specialization in Artificial Intelligence and Machine Learning.',
+      project: 'Academic Achievement',
+    },
+    {
   id: 2,
   name: 'Machine Learning Projects',
   role: 'Project Experience',
