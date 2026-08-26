@@ -28,46 +28,72 @@ const Achievements = () => {
         'Completed Bachelor of Technology in Computer Science Engineering with specialization in Artificial Intelligence and Machine Learning.',
       project: 'Academic Achievement',
     },
+
     {
-  id: 2,
-  name: 'Machine Learning Projects',
-  role: 'Project Experience',
-  company: 'Portfolio',
-  image: 'machine.jpg',
-  content:
-    'Designed and deployed multiple real-world projects, including Fake News Detection, Election Guide Assistant, and Business Analytics Dashboard, demonstrating expertise in Python, Machine Learning, NLP, AI, and Data Analytics.',
-  project: 'Technical Projects',
-},
-{
-  id: 3,
-  name: 'Certifications',
-  role: 'Professional Development',
-  company: 'Learning',
-  image: 'certified.jpg',
-  content:
-    'Earned industry-recognized certifications in Data Analytics, SQL, Machine Learning, and Business Analytics, strengthening practical skills through continuous learning.',
-  project: 'Continuous Learning',
-},
-{
-  id: 4,
-  name: 'AWS User Group Kolkata',
-  role: 'Volunteer',
-  company: 'AWS Community',
-  image: 'aws.jpg',
-  content:
-    'Active volunteer at AWS User Group Kolkata, supporting community-driven technical events, engaging with developers, and contributing to knowledge-sharing initiatives in cloud computing and emerging technologies.',
-  project: 'Community Leadership',
-},
-{
-  id: 5,
-  name: 'Open Source & GitHub',
-  role: 'Development',
-  company: 'GitHub',
-  image: 'git.jpg',
-  content:
-    'Actively building, maintaining, and deploying open-source projects on GitHub while continuously improving software engineering, problem-solving, and version control practices.',
-  project: 'Portfolio Development',
-},
+      id: 2,
+      name: 'Tata – GenAI Powered Data Analytics',
+      role: 'Virtual Experience Program',
+      company: 'Forage | July 2025',
+      image: 'tata.jpg',
+      content:
+        'Completed a virtual experience focused on using Generative AI for data analytics, analyzing business datasets to identify trends and support data-driven decision-making.',
+      project: 'GenAI & Data Analytics',
+    },
+
+    {
+      id: 3,
+      name: 'Deloitte Australia – Data Analytics & Solution Architecture',
+      role: 'Virtual Experience Program',
+      company: 'Forage',
+      image: 'deloitte.jpg',
+      content:
+        'Completed a virtual experience involving business intelligence and data analysis activities to identify trends, interpret data, and derive actionable business insights.',
+      project: 'Data Analytics & Business Intelligence',
+    },
+
+    {
+      id: 4,
+      name: 'Machine Learning Projects',
+      role: 'Project Experience',
+      company: 'Portfolio',
+      image: 'machine.jpg',
+      content:
+        'Designed and deployed multiple practical projects including Fake News Detection, AI Career Copilot, FORESIGHT, Customer Churn Prediction, and other AI and Data Analytics applications.',
+      project: 'Technical Projects',
+    },
+
+    {
+      id: 5,
+      name: 'Certifications',
+      role: 'Professional Development',
+      company: 'Learning',
+      image: 'certified.jpg',
+      content:
+        'Earned industry-recognized certifications and completed professional learning programs in Artificial Intelligence, Machine Learning, Data Analytics, Cloud, and Generative AI.',
+      project: 'Continuous Learning',
+    },
+
+    {
+      id: 6,
+      name: 'AWS User Group Kolkata',
+      role: 'Volunteer',
+      company: 'AWS Community',
+      image: 'aws.jpg',
+      content:
+        'Active volunteer at AWS User Group Kolkata, supporting community-driven technical events, engaging with developers, and contributing to knowledge-sharing initiatives in cloud computing and emerging technologies.',
+      project: 'Community Leadership',
+    },
+
+    {
+      id: 7,
+      name: 'Open Source & GitHub',
+      role: 'Development',
+      company: 'GitHub',
+      image: 'git.jpg',
+      content:
+        'Actively building, maintaining, and deploying projects on GitHub while continuously improving software engineering, problem-solving, and version control practices.',
+      project: 'Portfolio Development',
+    },
   ];
 
   const nextSlide = () => {
@@ -118,14 +144,15 @@ const Achievements = () => {
       className="py-20 bg-white dark:bg-gray-800"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Achievements & Certifications
+            Achievements & Professional Experiences
           </h2>
 
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
-            Key milestones from my learning and development journey
+            Key milestones, virtual experiences, certifications, and professional development
           </p>
 
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto"></div>
@@ -145,7 +172,7 @@ const Achievements = () => {
             <div className="relative z-10">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-gradient-to-r from-primary to-accent text-white rounded-full text-sm font-medium">
-                  Achievement
+                  {achievements[currentIndex].role}
                 </span>
               </div>
 
@@ -168,7 +195,6 @@ const Achievements = () => {
                   </h4>
 
                   <p className="text-gray-600 dark:text-gray-400">
-                    {achievements[currentIndex].role} •{' '}
                     {achievements[currentIndex].company}
                   </p>
 
@@ -180,27 +206,31 @@ const Achievements = () => {
             </div>
           </div>
 
-          {/* Navigation */}
+          {/* Previous */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center"
+            aria-label="Previous achievement"
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-200"
           >
             <ChevronLeft size={20} />
           </button>
 
+          {/* Next */}
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center"
+            aria-label="Next achievement"
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-200"
           >
             <ChevronRight size={20} />
           </button>
 
           {/* Dots */}
           <div className="flex justify-center space-x-2 mt-8">
-            {achievements.map((_, index) => (
+            {achievements.map((achievement, index) => (
               <button
-                key={index}
+                key={achievement.id}
                 onClick={() => goToSlide(index)}
+                aria-label={`Go to ${achievement.name}`}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex
                     ? 'bg-gradient-to-r from-primary to-accent scale-125'
@@ -243,7 +273,7 @@ const Achievements = () => {
         {/* CTA */}
         <div className="text-center mt-16">
           <p className="text-gray-600 dark:text-gray-300 mb-6">
-            Continuously learning, building projects, and improving my skills.
+            Continuously learning, building projects, and developing practical industry skills.
           </p>
 
           <button
