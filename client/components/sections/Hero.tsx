@@ -128,7 +128,7 @@ const Hero = () => {
           {/* Stats */}
           <div className="flex space-x-8 mt-12 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary">6+</div>
+              <div className="text-2xl font-bold text-primary">1+</div>
               <div className="text-sm text-gray-400">Projects</div>
             </div>
             <div className="text-center">
