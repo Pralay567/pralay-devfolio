@@ -19,145 +19,173 @@ const Projects = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const projects: Project[] = [
-    {
-      id: 1,
-      title: 'Fake News Detection System',
-      description:
-        'Built an NLP-based machine learning application to classify news articles as real or fake. Trained and evaluated multiple Scikit-learn models using TF-IDF vectorization, achieving reliable prediction accuracy with confidence scores. Deployed as an interactive Streamlit web app for real-time news verification.',
-      image: 'news.jpg',
-      technologies: [
-        'Python',
-        'Machine Learning',
-        'NLP',
-        'Scikit-Learn',
-        'Streamlit',
-      ],
-      category: 'Machine Learning',
-      liveUrl:
-        'https://fake-news-detection-ml-tmfdyzjga4fhsgcx9pwes6.streamlit.app/',
-      githubUrl:
-        'https://github.com/Pralay567/fake-news-detection-ml/tree/main',
-      featured: true,
-    },
+  {
+    id: 1,
+    title: 'Financial Fraud Detection',
+    description:
+      'Developed an AI-powered fraud detection system that analyzes transaction attributes to estimate fraud probability, assign risk scores, and classify transactions into Low, Medium, High, and Critical risk levels. Built a tuned HistGradientBoosting model with a FastAPI backend and React dashboard, and deployed the complete application for real-time fraud risk prediction.',
+    image: 'fraud.jpg',
+    technologies: [
+      'Python',
+      'Machine Learning',
+      'Scikit-Learn',
+      'FastAPI',
+      'React',
+      'Data Analytics',
+    ],
+    category: 'Machine Learning',
+    liveUrl:
+      'https://financial-fraud-detection-frontend.onrender.com/',
+    githubUrl:
+      'https://github.com/Pralay567/financial-fraud-detection',
+    featured: true,
+  },
 
-    {
-      id: 2,
-      title: 'AI Career Copilot',
-      description:
-        'Developed an AI-powered career guidance application that analyzes student profiles, skills, resumes, and career goals to provide personalized career insights. Built AI/ML workflows for skill-gap analysis, interview preparation, and personalized learning guidance.',
-      image: 'career.jpg',
-      technologies: [
-        'Python',
-        'Machine Learning',
-        'NLP',
-        'Generative AI',
-        'Streamlit',
-      ],
-      category: 'AI',
-      liveUrl:
-        'https://ai-career-copilot-pnvc7nrxhdlzh7o9vakmpf.streamlit.app/',
-      githubUrl: 'https://github.com/Pralay567/AI-Career-Copilot',
-      featured: true,
-    },
+  {
+    id: 2,
+    title: 'FORESIGHT',
+    description:
+      'Developed an AI-powered demand and inventory intelligence application to forecast Store-SKU demand and identify inventory risks. Applied data preprocessing, feature engineering, predictive modeling, and inventory risk analysis, with a FastAPI backend and interactive web dashboard.',
+    image: 'foresight.jpg',
+    technologies: [
+      'Python',
+      'Machine Learning',
+      'Forecasting',
+      'Data Analytics',
+      'FastAPI',
+    ],
+    category: 'Machine Learning',
+    liveUrl:
+      'https://foresight-demand-frontend.onrender.com/',
+    githubUrl:
+      'https://github.com/Pralay567/FORESIGHT',
+    featured: true,
+  },
 
-    {
-      id: 3,
-      title: 'FORESIGHT',
-      description:
-        'Developed a demand forecasting application to analyze historical data and predict future demand trends. Applied data preprocessing, feature engineering, and predictive modeling to generate data-driven demand insights.',
-      image: 'foresight.jpg',
-      technologies: [
-        'Python',
-        'Machine Learning',
-        'Forecasting',
-        'Data Analytics',
-        'FastAPI',
-      ],
-      category: 'Machine Learning',
-      liveUrl: 'https://foresight-demand-frontend.onrender.com/',
-      githubUrl: 'https://github.com/Pralay567/FORESIGHT',
-      featured: true,
-    },
+  {
+    id: 3,
+    title: 'Business Analytics Dashboard',
+    description:
+      'Designed an interactive business intelligence dashboard to analyze sales performance, customer behavior, and key business KPIs. Leveraged SQL, Pandas, Power BI, and Streamlit to transform raw data into actionable insights through dynamic visualizations.',
+    image: 'business.jpg',
+    technologies: [
+      'Python',
+      'Pandas',
+      'Power BI',
+      'SQL',
+      'Data Analysis',
+    ],
+    category: 'Analytics',
+    liveUrl:
+      'https://global-business-analytics-dashboard-o2xvjzfd4sjrmhfrcw6qss.streamlit.app/',
+    githubUrl:
+      'https://github.com/Pralay567/Global-Business-Analytics-Dashboard',
+    featured: true,
+  },
 
-    {
-      id: 4,
-      title: 'Customer Churn Prediction',
-      description:
-        'Developed a machine learning application to predict customer churn based on customer behavior and demographic features. Performed data preprocessing, exploratory analysis, feature engineering, and model evaluation to identify churn patterns and risk factors.',
-      image: 'churn.jpg',
-      technologies: [
-        'Python',
-        'Pandas',
-        'Scikit-Learn',
-        'Machine Learning',
-        'Streamlit',
-      ],
-      category: 'Machine Learning',
-      liveUrl:
-        'https://customer-churn-prediction-cwhv7arhbnr4v2ilr3m88u.streamlit.app/',
-      githubUrl: '#',
-      featured: false,
-    },
+  {
+    id: 4,
+    title: 'AI Career Copilot',
+    description:
+      'Developed an AI-powered career guidance application that analyzes student profiles, skills, resumes, and career goals to provide personalized career insights. Built AI/ML workflows for skill-gap analysis, interview preparation, and personalized learning guidance.',
+    image: 'career.jpg',
+    technologies: [
+      'Python',
+      'Machine Learning',
+      'NLP',
+      'Generative AI',
+      'Streamlit',
+    ],
+    category: 'AI',
+    liveUrl:
+      'https://ai-career-copilot-pnvc7nrxhdlzh7o9vakmpf.streamlit.app/',
+    githubUrl:
+      'https://github.com/Pralay567/AI-Career-Copilot',
+    featured: true,
+  },
 
-    {
-      id: 5,
-      title: 'Election Guide Assistant',
-      description:
-        'Developed an AI-powered election assistance platform that provides constituency details, election guidance, and location-based services. Integrated Google Gemini AI, Folium maps, and geolocation to deliver accurate, interactive, and user-friendly election information.',
-      image: 'election.jpg',
-      technologies: [
-        'Python',
-        'Streamlit',
-        'Gemini AI',
-        'Folium',
-        'Geopy',
-      ],
-      category: 'AI',
-      liveUrl:
-        'https://election-assistant-fdgxetefqsxjy4dqu2j8ra.streamlit.app/',
-      githubUrl: 'https://github.com/Pralay567/election-assistant',
-      featured: true,
-    },
+  {
+    id: 5,
+    title: 'Fake News Detection System',
+    description:
+      'Built an NLP-based machine learning application to classify news articles as real or fake. Trained and evaluated multiple Scikit-learn models using TF-IDF vectorization and deployed the solution as an interactive Streamlit application for real-time news classification.',
+    image: 'news.jpg',
+    technologies: [
+      'Python',
+      'Machine Learning',
+      'NLP',
+      'Scikit-Learn',
+      'Streamlit',
+    ],
+    category: 'Machine Learning',
+    liveUrl:
+      'https://fake-news-detection-ml-tmfdyzjga4fhsgcx9pwes6.streamlit.app/',
+    githubUrl:
+      'https://github.com/Pralay567/fake-news-detection-ml/tree/main',
+    featured: true,
+  },
 
-    {
-      id: 6,
-      title: 'Business Analytics Dashboard',
-      description:
-        'Designed an interactive business intelligence dashboard to analyze sales performance, customer behavior, and key business KPIs. Leveraged SQL, Pandas, Power BI, and Streamlit to transform raw data into actionable insights through dynamic visualizations.',
-      image: 'business.jpg',
-      technologies: [
-        'Python',
-        'Pandas',
-        'Power BI',
-        'SQL',
-        'Data Analysis',
-      ],
-      category: 'Analytics',
-      liveUrl:
-        'https://global-business-analytics-dashboard-o2xvjzfd4sjrmhfrcw6qss.streamlit.app/',
-      githubUrl:
-        'https://github.com/Pralay567/Global-Business-Analytics-Dashboard',
-      featured: true,
-    },
+  {
+    id: 6,
+    title: 'Customer Churn Prediction',
+    description:
+      'Developed a machine learning application to predict customer churn based on customer behavior and demographic features. Performed data preprocessing, exploratory analysis, feature engineering, and model evaluation to identify churn patterns and risk factors.',
+    image: 'churn.jpg',
+    technologies: [
+      'Python',
+      'Pandas',
+      'Scikit-Learn',
+      'Machine Learning',
+      'Streamlit',
+    ],
+    category: 'Machine Learning',
+    liveUrl:
+      'https://customer-churn-prediction-cwhv7arhbnr4v2ilr3m88u.streamlit.app/',
+    githubUrl: '#',
+    featured: false,
+  },
 
-    {
-      id: 7,
-      title: 'Portfolio Website',
-      description:
-        'Designed and developed a modern, responsive developer portfolio to showcase projects, technical skills, certifications, and achievements. Built with React, TypeScript, Tailwind CSS, and Vite, featuring smooth animations, project filtering, and optimized performance.',
-      image: 'portfolio.jpg',
-      technologies: [
-        'React',
-        'TypeScript',
-        'Tailwind CSS',
-        'Vite',
-      ],
-      category: 'Frontend',
-      liveUrl: 'https://spiffy-youtiao-009ed2.netlify.app/',
-      githubUrl: 'https://github.com/Pralay567/pralay-devfolio',
-      featured: false,
-    },
-  ];
+  {
+    id: 7,
+    title: 'Election Guide Assistant',
+    description:
+      'Developed an AI-powered election assistance platform that provides constituency details, election guidance, and location-based services. Integrated Google Gemini AI, Folium maps, and geolocation to deliver interactive and user-friendly election information.',
+    image: 'election.jpg',
+    technologies: [
+      'Python',
+      'Streamlit',
+      'Gemini AI',
+      'Folium',
+      'Geopy',
+    ],
+    category: 'AI',
+    liveUrl:
+      'https://election-assistant-fdgxetefqsxjy4dqu2j8ra.streamlit.app/',
+    githubUrl:
+      'https://github.com/Pralay567/election-assistant',
+    featured: true,
+  },
+
+  {
+    id: 8,
+    title: 'Portfolio Website',
+    description:
+      'Designed and developed a modern, responsive developer portfolio to showcase projects, technical skills, certifications, and achievements. Built with React, TypeScript, Tailwind CSS, and Vite, featuring smooth animations, project filtering, and optimized performance.',
+    image: 'portfolio.jpg',
+    technologies: [
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'Vite',
+    ],
+    category: 'Frontend',
+    liveUrl:
+      'https://spiffy-youtiao-009ed2.netlify.app/',
+    githubUrl:
+      'https://github.com/Pralay567/pralay-devfolio',
+    featured: false,
+  },
+];
 
   const categories = [
     'All',
