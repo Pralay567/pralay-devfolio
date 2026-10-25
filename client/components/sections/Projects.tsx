@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from 'react';
 import { ExternalLink, Github, Eye } from 'lucide-react';
 
@@ -13,14 +14,34 @@ interface Project {
   featured: boolean;
 }
 
-const Projects = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  const projects: Project[] = [
+const projects: Project[] = [
   {
     id: 1,
+    title: 'Dynamic AI Chatbot',
+    description:
+      'Developed and deployed a full-stack AI-powered conversational chatbot using Google Gemini AI and Flask. Implemented context-aware conversations, multilingual support (English, Hindi, and Hinglish), sentiment analysis, conversation memory, and customizable chat settings. Built a responsive web interface with real-time messaging, interactive analytics dashboards, conversation management, and REST API integration.',
+    image: 'chatbot.jpg',
+    technologies: [
+      'Python',
+      'Generative AI',
+      'Google Gemini AI',
+      'NLP',
+      'Flask',
+      'REST API',
+      'JavaScript',
+      'HTML',
+      'CSS',
+      'Chart.js',
+    ],
+    category: 'AI',
+    liveUrl:
+      'https://dynamic-ai-chatbot-phgz.onrender.com/',
+    githubUrl:
+      'https://github.com/Pralay567/dynamic-ai-chatbot',
+    featured: true,
+  },
+  {
+    id: 2,
     title: 'Financial Fraud Detection',
     description:
       'Developed an AI-powered fraud detection system that analyzes transaction attributes to estimate fraud probability, assign risk scores, and classify transactions into Low, Medium, High, and Critical risk levels. Built a tuned HistGradientBoosting model with a FastAPI backend and React dashboard, and deployed the complete application for real-time fraud risk prediction.',
@@ -40,9 +61,8 @@ const Projects = () => {
       'https://github.com/Pralay567/financial-fraud-detection',
     featured: true,
   },
-
   {
-    id: 2,
+    id: 3,
     title: 'FORESIGHT',
     description:
       'Developed an AI-powered demand and inventory intelligence application to forecast Store-SKU demand and identify inventory risks. Applied data preprocessing, feature engineering, predictive modeling, and inventory risk analysis, with a FastAPI backend and interactive web dashboard.',
@@ -61,9 +81,8 @@ const Projects = () => {
       'https://github.com/Pralay567/FORESIGHT',
     featured: true,
   },
-
   {
-    id: 3,
+    id: 4,
     title: 'Business Analytics Dashboard',
     description:
       'Designed an interactive business intelligence dashboard to analyze sales performance, customer behavior, and key business KPIs. Leveraged SQL, Pandas, Power BI, and Streamlit to transform raw data into actionable insights through dynamic visualizations.',
@@ -82,9 +101,8 @@ const Projects = () => {
       'https://github.com/Pralay567/Global-Business-Analytics-Dashboard',
     featured: true,
   },
-
   {
-    id: 4,
+    id: 5,
     title: 'AI Career Copilot',
     description:
       'Developed an AI-powered career guidance application that analyzes student profiles, skills, resumes, and career goals to provide personalized career insights. Built AI/ML workflows for skill-gap analysis, interview preparation, and personalized learning guidance.',
@@ -103,9 +121,8 @@ const Projects = () => {
       'https://github.com/Pralay567/AI-Career-Copilot',
     featured: true,
   },
-
   {
-    id: 5,
+    id: 6,
     title: 'Fake News Detection System',
     description:
       'Built an NLP-based machine learning application to classify news articles as real or fake. Trained and evaluated multiple Scikit-learn models using TF-IDF vectorization and deployed the solution as an interactive Streamlit application for real-time news classification.',
@@ -124,9 +141,8 @@ const Projects = () => {
       'https://github.com/Pralay567/fake-news-detection-ml/tree/main',
     featured: true,
   },
-
   {
-    id: 6,
+    id: 7,
     title: 'Customer Churn Prediction',
     description:
       'Developed a machine learning application to predict customer churn based on customer behavior and demographic features. Performed data preprocessing, exploratory analysis, feature engineering, and model evaluation to identify churn patterns and risk factors.',
@@ -144,9 +160,8 @@ const Projects = () => {
     githubUrl: '#',
     featured: false,
   },
-
   {
-    id: 7,
+    id: 8,
     title: 'Election Guide Assistant',
     description:
       'Developed an AI-powered election assistance platform that provides constituency details, election guidance, and location-based services. Integrated Google Gemini AI, Folium maps, and geolocation to deliver interactive and user-friendly election information.',
@@ -165,9 +180,8 @@ const Projects = () => {
       'https://github.com/Pralay567/election-assistant',
     featured: true,
   },
-
   {
-    id: 8,
+    id: 9,
     title: 'Portfolio Website',
     description:
       'Designed and developed a modern, responsive developer portfolio to showcase projects, technical skills, certifications, and achievements. Built with React, TypeScript, Tailwind CSS, and Vite, featuring smooth animations, project filtering, and optimized performance.',
@@ -187,15 +201,27 @@ const Projects = () => {
   },
 ];
 
+const Projects = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [selectedCategory, setSelectedCategory] =
+    useState('All');
+
+  const sectionRef = useRef<HTMLDivElement>(null);
+
   const categories = [
     'All',
-    ...Array.from(new Set(projects.map((project) => project.category))),
+    ...Array.from(
+      new Set(projects.map((project) => project.category))
+    ),
   ];
 
   const filteredProjects =
     selectedCategory === 'All'
       ? projects
-      : projects.filter((project) => project.category === selectedCategory);
+      : projects.filter(
+          (project) =>
+            project.category === selectedCategory
+        );
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -207,8 +233,10 @@ const Projects = () => {
       { threshold: 0.2 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const section = sectionRef.current;
+
+    if (section) {
+      observer.observe(section);
     }
 
     return () => observer.disconnect();
@@ -238,7 +266,7 @@ const Projects = () => {
           <div
             className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto animate-scale-in"
             style={{ animationDelay: '0.2s' }}
-          ></div>
+          />
         </div>
 
         {/* Category Filter */}
@@ -246,14 +274,22 @@ const Projects = () => {
           {categories.map((category, index) => (
             <button
               key={category}
-              onClick={() => setSelectedCategory(category)}
+              type="button"
+              onClick={() =>
+                setSelectedCategory(category)
+              }
+              aria-pressed={
+                selectedCategory === category
+              }
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 animate-fade-in-up ${
                 selectedCategory === category
                   ? 'bg-gradient-to-r from-primary to-accent text-white shadow-lg'
                   : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
               }`}
               style={{
-                animationDelay: `${0.3 + index * 0.05}s`,
+                animationDelay: `${
+                  0.3 + index * 0.05
+                }s`,
               }}
             >
               {category}
@@ -272,10 +308,15 @@ const Projects = () => {
                   : 'opacity-0 translate-y-8'
               }`}
               style={{
-                animationDelay: `${0.4 + index * 0.1}s`,
-                transitionDelay: `${index * 0.1}s`,
+                animationDelay: `${
+                  0.4 + index * 0.1
+                }s`,
+                transitionDelay: `${
+                  index * 0.1
+                }s`,
               }}
             >
+
               {/* Featured Badge */}
               {project.featured && (
                 <div className="absolute top-4 left-4 z-10 bg-gradient-to-r from-primary to-accent text-white px-3 py-1 rounded-full text-xs font-medium">
@@ -288,31 +329,60 @@ const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  onError={(event) => {
+                    const img = event.currentTarget;
+
+                    if (
+                      !img.dataset.fallbackApplied
+                    ) {
+                      img.dataset.fallbackApplied =
+                        'true';
+                      img.src = '/placeholder.jpg';
+                    }
+                  }}
                 />
 
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 right-4 flex gap-2">
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-all duration-200 flex items-center justify-center"
-                    >
-                      <Eye size={16} className="mr-2" />
-                      Live Demo
-                    </a>
 
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-all duration-200 flex items-center justify-center"
-                    >
-                      <Github size={16} className="mr-2" />
-                      Code
-                    </a>
+                    {/* Live Demo */}
+                    {project.liveUrl &&
+                      project.liveUrl !== '#' && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`View live demo of ${project.title}`}
+                          className="flex-1 bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-all duration-200 flex items-center justify-center"
+                        >
+                          <Eye
+                            size={16}
+                            className="mr-2"
+                          />
+                          Live Demo
+                        </a>
+                      )}
+
+                    {/* GitHub Repository */}
+                    {project.githubUrl &&
+                      project.githubUrl !== '#' && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`View source code of ${project.title}`}
+                          className="flex-1 bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-all duration-200 flex items-center justify-center"
+                        >
+                          <Github
+                            size={16}
+                            className="mr-2"
+                          />
+                          Code
+                        </a>
+                      )}
                   </div>
                 </div>
               </div>
@@ -332,7 +402,7 @@ const Projects = () => {
                   />
                 </div>
 
-                {/* Title */}
+                {/* Project Title */}
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-primary transition-colors duration-300">
                   {project.title}
                 </h3>
@@ -344,19 +414,21 @@ const Projects = () => {
 
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mt-auto">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                  {project.technologies.map(
+                    (tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-all duration-300"
+                      >
+                        {tech}
+                      </span>
+                    )
+                  )}
                 </div>
               </div>
 
               {/* Hover Border */}
-              <div className="absolute inset-0 border-2 border-transparent group-hover:border-primary rounded-xl transition-all duration-300 pointer-events-none"></div>
+              <div className="absolute inset-0 border-2 border-transparent group-hover:border-primary rounded-xl transition-all duration-300 pointer-events-none" />
             </div>
           ))}
         </div>
@@ -372,9 +444,14 @@ const Projects = () => {
             </p>
 
             <button
+              type="button"
               onClick={() => {
-                const element = document.querySelector('#contact');
-                element?.scrollIntoView({ behavior: 'smooth' });
+                const element =
+                  document.querySelector('#contact');
+
+                element?.scrollIntoView({
+                  behavior: 'smooth',
+                });
               }}
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-primary to-accent text-white font-medium rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
@@ -385,6 +462,7 @@ const Projects = () => {
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -396,6 +474,7 @@ const Projects = () => {
             </button>
           </div>
         </div>
+
       </div>
     </section>
   );
