@@ -199,6 +199,25 @@ const projects: Project[] = [
       'https://github.com/Pralay567/pralay-devfolio',
     featured: false,
   },
+  {
+  id: 10,
+  title: 'Urban Air Quality Assistant',
+  description:
+    'Developed and deployed an interactive Urban Air Quality Assistant to monitor real-time air quality and weather conditions. Provides AQI insights, interactive visualizations, and personalized pollution-awareness recommendations through a responsive Streamlit dashboard.',
+  image: 'urban-air-quality-assistant.jpg',
+  technologies: [
+    'Python',
+    'Streamlit',
+    'Open-Meteo API',
+    'Data Visualization',
+  ],
+  category: 'AI & ML',
+  liveUrl:
+    'https://urban-air-quality-assistant-jjvuqfi9qekxcgggtfpcys.streamlit.app/',
+  githubUrl:
+    'https://github.com/Pralay567/urban-air-quality-assistant',
+  featured: false,
+},
 ];
 
 const Projects = () => {
